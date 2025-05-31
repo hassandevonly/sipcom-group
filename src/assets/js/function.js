@@ -158,7 +158,7 @@
     }
 
 	/* Parallaxie js */
-	var $parallaxie = $('.parallaxie');
+	/* var $parallaxie = $('.parallaxie');
 	if($parallaxie.length && ($window.width() > 991))
 	{
 		if ($window.width() > 768) {
@@ -167,7 +167,7 @@
 				offset: 0,
 			});
 		}
-	}
+	} */
 
 	/* Zoom Gallery screenshot */
 	$('.gallery-items').magnificPopup({
