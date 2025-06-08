@@ -5,40 +5,29 @@
             <div class="container">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="./">
-                    <img src="assets/images/logo.svg" alt="Logo">
+                    <h3 class="wow fadeInUp">SIPCOM CAPITAL </h3>
                 </a>
                 <!-- Logo End -->
 
-                <!-- Main Menu Start -->
-                <div class="collapse navbar-collapse main-menu">
+                <!-- Menu Desktop Start -->
+                <div class="collapse navbar-collapse main-menu d-none d-lg-flex">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
                             <li class="nav-item submenu"><a class="nav-link" href="./">Accueil</a>
                                 <ul>
-                                    <li class="nav-item"><a class="nav-link" href="index.html">Présentation de SIPCOM CAPITAL</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="index-video.html">Citation du fondateur</a>
+                                    <li class="nav-item"><a class="nav-link" href="#presentation">Présentation de SIPCOM
+                                            CAPITAL</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#motfondateur">Mots du fondateur</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="index-video.html">Accès rapide aux services phares</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="index-slider.html">Témoignages / partenaires</a>
-                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href="#services">Services
+                                            phares</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#temoignages">Partenaires</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">À propos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Nos Services</a></li>
-                            <li class="nav-item submenu"><a class="nav-link" href="#">Services</a>
-                                <ul>
-                                    <li class="nav-item"><a class="nav-link" href="service-single.html">Service
-                                            Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="blog-single.html">Blog Details</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="project-single.html">Project
-                                            Details</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contactez Nous</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Blog">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Services">Nos Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Contact">Contactez Nous</a></li>
                         </ul>
                     </div>
 
@@ -48,11 +37,38 @@
                     </div>
                     <!-- Header Btn End -->
                 </div>
-                <!-- Main Menu End -->
-                <div class="navbar-toggle"></div>
+                <!-- Menu Desktop End -->
+
+                <!-- Hamburger Mobile (visible uniquement sur mobile) -->
+                <!-- Hamburger Mobile -->
+                <button class="menu-toggle d-lg-none no-border-bg" (click)="toggleMenu()">
+                    <i class="fas fa-bars fa-2x custom-menu-icon"></i>
+                </button>
             </div>
         </nav>
-        <div class="responsive-menu"></div>
+
+        <!-- Menu Mobile (Slide In) -->
+        <div class="mobile-menu d-lg-none" [class.open]="menuOpen">
+            <div class="menu-header d-flex justify-content-between align-items-center px-3 py-3">
+                <a class="navbar-brand text-white" routerLink="/">SIPCOM CAPITAL</a>
+                <button class="close-btn" (click)="toggleMenu()">
+                    <i class="fas fa-times fa-2x text-white"></i>
+                </button>
+            </div>
+            <ul class="menu-list list-unstyled px-3">
+                <li><a routerLink="/" (click)="closeMenu()">Accueil</a></li>
+                <li><a href="#presentation" (click)="closeMenu()">Présentation</a></li>
+                <li><a href="#motfondateur" (click)="closeMenu()">Mots du fondateur</a></li>
+                <li><a href="#services" (click)="closeMenu()">Services phares</a></li>
+                <li><a href="#temoignages" (click)="closeMenu()">Témoignages</a></li>
+                <li><a href="#about" (click)="closeMenu()">À propos</a></li>
+                <li><a href="#services" (click)="closeMenu()">Nos Services</a></li>
+                <li><a routerLink="/contact" (click)="closeMenu()">Contactez Nous</a></li>
+                <li class="text-center mt-3">
+                    <a routerLink="/contact" class="btn btn-light w-100" (click)="closeMenu()">Se Connecter</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </header>
 <!-- Header End -->

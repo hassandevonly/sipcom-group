@@ -1,0 +1,52 @@
+$gradient-bg: linear-gradient(to bottom right, #4b6cb7, #182848);
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 80%;
+  max-width: 320px;
+  background: $gradient-bg;
+  color: white;
+  transition: right 0.3s ease-in-out;
+  z-index: 1050;
+  overflow-y: auto;
+
+  .no-border-bg {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0;
+  }
+
+  .custom-menu-icon {
+    color: #FFD700; // Remplace par la couleur que tu veux
+  }
+
+  &.open {
+    right: 0;
+  }
+
+  .menu-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menu-list a {
+    display: block;
+    padding: 1rem 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+  }
+}
